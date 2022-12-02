@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 18</title>
+</head>
+
+<body>
+    <h1>Assignment 18</h1>
+    <ol>
+        <li>Write a function that takes your name and age as an input parameter and print it by using
+            string concatenation.</li>
+        <li>Write a function name ‘Double’ that takes an input parameter and multiply that parameter
+            by 2 and store the result in a variable and call the function by passing an argument.</li>
+        <li>Write a function to print the square of a number by using function expression and that
+            function can be used as variable value for other variables.</li>
+        <li>Write an arrow function as an expression to check the age of the baby . If the age of the
+            baby is less than 18 print Baby else print adult.</li>
+        <li>Write an arrow function and print a sum of two numbers by passing a single parameter
+            inside the arrow function.</li>
+        <li>Write an object ‘cities’ and loop values of the object's properties by using for... in Loop
+            and print them.</li>
+        <li>Write a for...of loop to traverse the array and print the elements of an array with indices.</li>
+        <li>Write an unnamed /anonymous function which calculates the area of a rectangle.</li>
+    </ol>
+    <script>
+        //Q1
+        function myfunc(name, age) {
+
+            var str = name;
+            var str2 = age
+            var value = str.concat(str2);
+            console.log(value);
+        }
+        myfunc('Fariya ', 24);
+
+        //Q2
+        var Fun = Double(12);
+        function Double(x) {
+            return x * 2;
+        }
+        console.log(Fun);
+
+
+        //Q3
+        function square(x) {
+            return x * x;
+        }
+        const num = square(3);
+        console.log(num)
+
+        Q4
+        let age = prompt ('enter number');
+
+        let hello = (age < 18) ?
+          () => console.log('Baby') :
+          () => console.log('Adult');
+
+        hello(); 
+
+        //Q5
+        let sum = (a, b) => {
+            let result = a + b;
+            return result;
+        }
+
+        let result1 = sum(2, 3);
+        console.log(result1);
+
+        //Q6
+        var cities = { city1: 'Karachi', city2: 'Quetta', city3: 'Peshawar' };
+
+        for (var city in cities) {
+            console.log(cities[city]);
+        }
+        //Q7
+        let arr = [10, 20, 30, 40];
+
+        for (var index in arr) {
+            console.log(index, arr[index]);
+        }
+
+        //Q8
+        let area = function (length, breadth) {
+            return length * breadth
+        }
+        let x = area(2, 8)
+        console.log("Area of the rectangle is = ", x);
+
+
+    </script>
+</body>
+
+</html>
